@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+
+#driver_config:
+#  require_chef_omnibus: true
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  #- name: ubuntu-12.04
+  - name: centos-6.5
+    driver:
+      box: chap1_conv_ver
+
+suites:
+  - name: default
+    run_list:
+      - recipe[chapter1::default]
+    attributes:

@@ -1,0 +1,754 @@
+I, [2015-02-24T13:45:44.201960 #17280]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T13:45:44.830897 #17280]  INFO -- Kitchen: -----> Creating <default-ubuntu-1204>...
+I, [2015-02-24T13:46:42.945973 #17280]  INFO -- Kitchen: -----> Converging <default-ubuntu-1204>...
+I, [2015-02-24T13:47:14.003473 #17280]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2015-02-24T13:48:29.817973 #17280]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2015-02-24T13:49:23.091473 #17280]  INFO -- Kitchen: -----> Kitchen is finished. (3m38.89s)
+I, [2015-02-24T13:49:32.245973 #10468]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T13:49:32.933973 #10468]  INFO -- Kitchen: -----> Setting up <default-ubuntu-1204>...
+I, [2015-02-24T13:49:32.942473 #10468]  INFO -- Kitchen: -----> Verifying <default-ubuntu-1204>...
+I, [2015-02-24T13:49:32.951973 #10468]  INFO -- Kitchen: -----> Setting up <default-centos-64>...
+I, [2015-02-24T13:49:32.960473 #10468]  INFO -- Kitchen: -----> Verifying <default-centos-64>...
+I, [2015-02-24T13:49:32.968473 #10468]  INFO -- Kitchen: -----> Kitchen is finished. (0m0.72s)
+I, [2015-02-24T13:50:58.913973 #15968]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T13:50:59.558473 #15968]  INFO -- Kitchen: -----> Verifying <default-ubuntu-1204>...
+I, [2015-02-24T13:50:59.571973 #15968]  INFO -- Kitchen: -----> Verifying <default-centos-64>...
+I, [2015-02-24T13:50:59.579973 #15968]  INFO -- Kitchen: -----> Kitchen is finished. (0m0.66s)
+E, [2015-02-24T13:53:57.891473 #18676] ERROR -- Kitchen: 
+Argument `' returned multiple results:
+  * default-ubuntu-1204
+  * default-centos-64
+
+
+I, [2015-02-24T13:54:08.710973 #13792]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T13:54:09.354473 #13792]  INFO -- Kitchen: -----> Verifying <default-ubuntu-1204>...
+E, [2015-02-24T13:54:14.467473 #13792] ERROR -- Kitchen: Verify failed on instance <default-ubuntu-1204>.
+I, [2015-02-24T13:54:21.450473 #10116]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T13:54:22.102473 #10116]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1204>...
+I, [2015-02-24T13:54:32.246473 #10116]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2015-02-24T13:54:42.413973 #10116]  INFO -- Kitchen: -----> Kitchen is finished. (0m20.96s)
+I, [2015-02-24T13:56:16.118973 #9364]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T13:56:16.756973 #9364]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2015-02-24T13:57:21.669473 #9364]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2015-02-24T13:58:14.618973 #9364]  INFO -- Kitchen: -----> Kitchen is finished. (1m58.50s)
+I, [2015-02-24T13:58:22.473973 #7380]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T13:58:23.124473 #7380]  INFO -- Kitchen: -----> Setting up <default-centos-64>...
+I, [2015-02-24T14:00:09.318473 #7380]  INFO -- Kitchen: -----> Verifying <default-centos-64>...
+I, [2015-02-24T14:04:47.466572 #7380]  INFO -- Kitchen: -----> Kitchen is finished. (6m24.99s)
+I, [2015-02-24T14:19:43.111165 #14356]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T14:19:43.728789 #14356]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2015-02-24T14:19:48.840311 #14356] ERROR -- Kitchen: ------Exception-------
+E, [2015-02-24T14:19:48.840811 #14356] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2015-02-24T14:19:48.841311 #14356] ERROR -- Kitchen: Message: Failed to complete #converge action: [No connection could be made because the target machine actively refused it. - connect(2)]
+E, [2015-02-24T14:19:48.841311 #14356] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-02-24T14:19:48.841311 #14356] ERROR -- Kitchen: Class: Errno::ECONNREFUSED
+E, [2015-02-24T14:19:48.841311 #14356] ERROR -- Kitchen: Message: No connection could be made because the target machine actively refused it. - connect(2)
+E, [2015-02-24T14:19:48.841311 #14356] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-02-24T14:19:48.841311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `initialize'
+E, [2015-02-24T14:19:48.841811 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `open'
+E, [2015-02-24T14:19:48.841811 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `block in initialize'
+E, [2015-02-24T14:19:48.841811 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
+E, [2015-02-24T14:19:48.842311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/timeout.rb:97:in `timeout'
+E, [2015-02-24T14:19:48.842311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:67:in `initialize'
+E, [2015-02-24T14:19:48.842311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh.rb:207:in `new'
+E, [2015-02-24T14:19:48.842311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh.rb:207:in `start'
+E, [2015-02-24T14:19:48.842311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:201:in `establish_connection'
+E, [2015-02-24T14:19:48.842311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:184:in `session'
+E, [2015-02-24T14:19:48.842311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:236:in `exec_with_exit'
+E, [2015-02-24T14:19:48.842811 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:81:in `exec'
+E, [2015-02-24T14:19:48.842811 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:150:in `run_remote'
+E, [2015-02-24T14:19:48.842811 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:46:in `block in converge'
+E, [2015-02-24T14:19:48.842811 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:70:in `initialize'
+E, [2015-02-24T14:19:48.842811 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:45:in `new'
+E, [2015-02-24T14:19:48.842811 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:45:in `converge'
+E, [2015-02-24T14:19:48.842811 #14356] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:75:in `converge'
+E, [2015-02-24T14:19:48.842811 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-02-24T14:19:48.843311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-02-24T14:19:48.843311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `call'
+E, [2015-02-24T14:19:48.843311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `synchronize_or_call'
+E, [2015-02-24T14:19:48.843311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-02-24T14:19:48.843311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2015-02-24T14:19:48.843311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-02-24T14:19:48.843311 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-02-24T14:19:48.843812 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:312:in `converge_action'
+E, [2015-02-24T14:19:48.843812 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-02-24T14:19:48.843812 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-02-24T14:19:48.843812 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-02-24T14:19:48.843812 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:130:in `converge'
+E, [2015-02-24T14:19:48.844312 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-02-24T14:19:48.844312 #14356] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-02-24T14:19:48.844312 #14356] ERROR -- Kitchen: ----------------------
+I, [2015-02-24T14:34:06.645338 #17144]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T14:34:07.325474 #17144]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2015-02-24T14:34:12.428994 #17144] ERROR -- Kitchen: ------Exception-------
+E, [2015-02-24T14:34:12.429494 #17144] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2015-02-24T14:34:12.429494 #17144] ERROR -- Kitchen: Message: Failed to complete #converge action: [No connection could be made because the target machine actively refused it. - connect(2)]
+E, [2015-02-24T14:34:12.429994 #17144] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-02-24T14:34:12.429994 #17144] ERROR -- Kitchen: Class: Errno::ECONNREFUSED
+E, [2015-02-24T14:34:12.429994 #17144] ERROR -- Kitchen: Message: No connection could be made because the target machine actively refused it. - connect(2)
+E, [2015-02-24T14:34:12.429994 #17144] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-02-24T14:34:12.429994 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `initialize'
+E, [2015-02-24T14:34:12.429994 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `open'
+E, [2015-02-24T14:34:12.429994 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `block in initialize'
+E, [2015-02-24T14:34:12.430494 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
+E, [2015-02-24T14:34:12.430494 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/timeout.rb:97:in `timeout'
+E, [2015-02-24T14:34:12.430494 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:67:in `initialize'
+E, [2015-02-24T14:34:12.430494 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh.rb:207:in `new'
+E, [2015-02-24T14:34:12.430494 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh.rb:207:in `start'
+E, [2015-02-24T14:34:12.430494 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:201:in `establish_connection'
+E, [2015-02-24T14:34:12.430494 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:184:in `session'
+E, [2015-02-24T14:34:12.430494 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:236:in `exec_with_exit'
+E, [2015-02-24T14:34:12.430994 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:81:in `exec'
+E, [2015-02-24T14:34:12.430994 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:150:in `run_remote'
+E, [2015-02-24T14:34:12.430994 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:46:in `block in converge'
+E, [2015-02-24T14:34:12.430994 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:70:in `initialize'
+E, [2015-02-24T14:34:12.430994 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:45:in `new'
+E, [2015-02-24T14:34:12.431495 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:45:in `converge'
+E, [2015-02-24T14:34:12.431495 #17144] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:75:in `converge'
+E, [2015-02-24T14:34:12.431495 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-02-24T14:34:12.431495 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-02-24T14:34:12.431495 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `call'
+E, [2015-02-24T14:34:12.431495 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `synchronize_or_call'
+E, [2015-02-24T14:34:12.431495 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-02-24T14:34:12.431495 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2015-02-24T14:34:12.431995 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-02-24T14:34:12.431995 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-02-24T14:34:12.431995 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:312:in `converge_action'
+E, [2015-02-24T14:34:12.431995 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-02-24T14:34:12.431995 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-02-24T14:34:12.432495 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-02-24T14:34:12.432495 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:130:in `converge'
+E, [2015-02-24T14:34:12.432495 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-02-24T14:34:12.432495 #17144] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-02-24T14:34:12.432495 #17144] ERROR -- Kitchen: ----------------------
+I, [2015-02-24T14:34:14.173343 #7048]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T14:34:14.824973 #7048]  INFO -- Kitchen: -----> Verifying <default-centos-64>...
+E, [2015-02-24T14:34:19.916491 #7048] ERROR -- Kitchen: ------Exception-------
+E, [2015-02-24T14:34:19.916991 #7048] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2015-02-24T14:34:19.916991 #7048] ERROR -- Kitchen: Message: Failed to complete #verify action: [No connection could be made because the target machine actively refused it. - connect(2)]
+E, [2015-02-24T14:34:19.916991 #7048] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-02-24T14:34:19.916991 #7048] ERROR -- Kitchen: Class: Errno::ECONNREFUSED
+E, [2015-02-24T14:34:19.917491 #7048] ERROR -- Kitchen: Message: No connection could be made because the target machine actively refused it. - connect(2)
+E, [2015-02-24T14:34:19.917491 #7048] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-02-24T14:34:19.917491 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `initialize'
+E, [2015-02-24T14:34:19.917491 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `open'
+E, [2015-02-24T14:34:19.917992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `block in initialize'
+E, [2015-02-24T14:34:19.917992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
+E, [2015-02-24T14:34:19.917992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/timeout.rb:97:in `timeout'
+E, [2015-02-24T14:34:19.918492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:67:in `initialize'
+E, [2015-02-24T14:34:19.918492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh.rb:207:in `new'
+E, [2015-02-24T14:34:19.918492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh.rb:207:in `start'
+E, [2015-02-24T14:34:19.918492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:201:in `establish_connection'
+E, [2015-02-24T14:34:19.918492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:184:in `session'
+E, [2015-02-24T14:34:19.918992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:236:in `exec_with_exit'
+E, [2015-02-24T14:34:19.918992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:81:in `exec'
+E, [2015-02-24T14:34:19.918992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:150:in `run_remote'
+E, [2015-02-24T14:34:19.918992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:66:in `block in verify'
+E, [2015-02-24T14:34:19.918992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:70:in `initialize'
+E, [2015-02-24T14:34:19.918992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:65:in `new'
+E, [2015-02-24T14:34:19.919492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:65:in `verify'
+E, [2015-02-24T14:34:19.919492 #7048] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:85:in `verify'
+E, [2015-02-24T14:34:19.919492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-02-24T14:34:19.919492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-02-24T14:34:19.919492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `call'
+E, [2015-02-24T14:34:19.919492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `synchronize_or_call'
+E, [2015-02-24T14:34:19.919992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-02-24T14:34:19.919992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2015-02-24T14:34:19.919992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-02-24T14:34:19.919992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-02-24T14:34:19.919992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:330:in `verify_action'
+E, [2015-02-24T14:34:19.919992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-02-24T14:34:19.920492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-02-24T14:34:19.920492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-02-24T14:34:19.920492 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:152:in `verify'
+E, [2015-02-24T14:34:19.920992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-02-24T14:34:19.920992 #7048] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-02-24T14:34:19.920992 #7048] ERROR -- Kitchen: ----------------------
+I, [2015-02-24T19:17:38.431796 #19508]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T19:17:39.082833 #19508]  INFO -- Kitchen: -----> Creating <default-buddy>...
+E, [2015-02-24T19:17:47.060289 #19508] ERROR -- Kitchen: ------Exception-------
+E, [2015-02-24T19:17:47.061289 #19508] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2015-02-24T19:17:47.061289 #19508] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'opscode-buddy' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Adding box 'opscode-buddy' (v0) for provider: virtualbox
+    default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_buddy_chef-provisionerless.box
+[K    default: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    default:
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+The requested URL returned error: 404 Not Found
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1]
+E, [2015-02-24T19:17:47.061289 #19508] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-02-24T19:17:47.061289 #19508] ERROR -- Kitchen: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2015-02-24T19:17:47.061289 #19508] ERROR -- Kitchen: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'opscode-buddy' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Adding box 'opscode-buddy' (v0) for provider: virtualbox
+    default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_buddy_chef-provisionerless.box
+[K    default: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    default:
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+The requested URL returned error: 404 Not Found
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1
+E, [2015-02-24T19:17:47.061289 #19508] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-02-24T19:17:47.061289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:69:in `rescue in run_command'
+E, [2015-02-24T19:17:47.062289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2015-02-24T19:17:47.062289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/base.rb:182:in `run_command'
+E, [2015-02-24T19:17:47.062289 #19508] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:123:in `run'
+E, [2015-02-24T19:17:47.062289 #19508] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:68:in `create'
+E, [2015-02-24T19:17:47.062289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-02-24T19:17:47.062289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-02-24T19:17:47.062289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `call'
+E, [2015-02-24T19:17:47.062289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `block in synchronize_or_call'
+E, [2015-02-24T19:17:47.063289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize'
+E, [2015-02-24T19:17:47.063289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize_or_call'
+E, [2015-02-24T19:17:47.063289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-02-24T19:17:47.063289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2015-02-24T19:17:47.063289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-02-24T19:17:47.063289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-02-24T19:17:47.063289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:303:in `create_action'
+E, [2015-02-24T19:17:47.063289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-02-24T19:17:47.063289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-02-24T19:17:47.063289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-02-24T19:17:47.063289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:130:in `converge'
+E, [2015-02-24T19:17:47.064289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-02-24T19:17:47.064289 #19508] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-02-24T19:17:47.064289 #19508] ERROR -- Kitchen: ----------------------
+I, [2015-02-24T19:20:36.039954 #3864]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T19:20:36.700992 #3864]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2015-02-24T19:20:41.841286 #3864] ERROR -- Kitchen: ------Exception-------
+E, [2015-02-24T19:20:41.842286 #3864] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2015-02-24T19:20:41.842286 #3864] ERROR -- Kitchen: Message: Failed to complete #converge action: [No connection could be made because the target machine actively refused it. - connect(2)]
+E, [2015-02-24T19:20:41.842286 #3864] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-02-24T19:20:41.843286 #3864] ERROR -- Kitchen: Class: Errno::ECONNREFUSED
+E, [2015-02-24T19:20:41.843286 #3864] ERROR -- Kitchen: Message: No connection could be made because the target machine actively refused it. - connect(2)
+E, [2015-02-24T19:20:41.843286 #3864] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-02-24T19:20:41.843286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `initialize'
+E, [2015-02-24T19:20:41.843286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `open'
+E, [2015-02-24T19:20:41.843286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `block in initialize'
+E, [2015-02-24T19:20:41.844286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
+E, [2015-02-24T19:20:41.844286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/timeout.rb:97:in `timeout'
+E, [2015-02-24T19:20:41.844286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:67:in `initialize'
+E, [2015-02-24T19:20:41.844286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh.rb:207:in `new'
+E, [2015-02-24T19:20:41.845286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh.rb:207:in `start'
+E, [2015-02-24T19:20:41.845286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:201:in `establish_connection'
+E, [2015-02-24T19:20:41.845286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:184:in `session'
+E, [2015-02-24T19:20:41.845286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:236:in `exec_with_exit'
+E, [2015-02-24T19:20:41.846286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:81:in `exec'
+E, [2015-02-24T19:20:41.846286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:150:in `run_remote'
+E, [2015-02-24T19:20:41.846286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:46:in `block in converge'
+E, [2015-02-24T19:20:41.846286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:70:in `initialize'
+E, [2015-02-24T19:20:41.846286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:45:in `new'
+E, [2015-02-24T19:20:41.846286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:45:in `converge'
+E, [2015-02-24T19:20:41.846286 #3864] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:75:in `converge'
+E, [2015-02-24T19:20:41.847286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-02-24T19:20:41.847286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-02-24T19:20:41.847286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `call'
+E, [2015-02-24T19:20:41.847286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `synchronize_or_call'
+E, [2015-02-24T19:20:41.847286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-02-24T19:20:41.847286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2015-02-24T19:20:41.848286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-02-24T19:20:41.848286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-02-24T19:20:41.848286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:312:in `converge_action'
+E, [2015-02-24T19:20:41.848286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-02-24T19:20:41.848286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-02-24T19:20:41.848286 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-02-24T19:20:41.850287 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:130:in `converge'
+E, [2015-02-24T19:20:41.850287 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-02-24T19:20:41.850287 #3864] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-02-24T19:20:41.851287 #3864] ERROR -- Kitchen: ----------------------
+I, [2015-02-24T19:21:46.448981 #18680]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T19:21:47.110019 #18680]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2015-02-24T19:21:52.201310 #18680] ERROR -- Kitchen: ------Exception-------
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: Message: Failed to complete #converge action: [No connection could be made because the target machine actively refused it. - connect(2)]
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: Class: Errno::ECONNREFUSED
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: Message: No connection could be made because the target machine actively refused it. - connect(2)
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `initialize'
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `open'
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:70:in `block in initialize'
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/timeout.rb:97:in `timeout'
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh/transport/session.rb:67:in `initialize'
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh.rb:207:in `new'
+E, [2015-02-24T19:21:52.202310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/gems/2.0.0/gems/net-ssh-2.9.2/lib/net/ssh.rb:207:in `start'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:201:in `establish_connection'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:184:in `session'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:236:in `exec_with_exit'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:81:in `exec'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:150:in `run_remote'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:46:in `block in converge'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:70:in `initialize'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:45:in `new'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:45:in `converge'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:75:in `converge'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-02-24T19:21:52.203310 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-02-24T19:21:52.204311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `call'
+E, [2015-02-24T19:21:52.204311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `synchronize_or_call'
+E, [2015-02-24T19:21:52.204311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-02-24T19:21:52.204311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2015-02-24T19:21:52.204311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-02-24T19:21:52.205311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-02-24T19:21:52.205311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:312:in `converge_action'
+E, [2015-02-24T19:21:52.205311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-02-24T19:21:52.205311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-02-24T19:21:52.206311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-02-24T19:21:52.206311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:130:in `converge'
+E, [2015-02-24T19:21:52.206311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-02-24T19:21:52.206311 #18680] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-02-24T19:21:52.206311 #18680] ERROR -- Kitchen: ----------------------
+I, [2015-02-24T19:22:45.134017 #20368]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T19:22:45.793601 #20368]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2015-02-24T19:22:50.450192 #20368]  INFO -- Kitchen: -----> Kitchen is finished. (0m5.31s)
+I, [2015-02-24T19:22:56.833503 #8220]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T19:22:57.493087 #8220]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+E, [2015-02-24T19:23:01.505096 #8220] ERROR -- Kitchen: ------Exception-------
+E, [2015-02-24T19:23:01.505096 #8220] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2015-02-24T19:23:01.505596 #8220] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'buddy'...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["import", "-n", "C:/Users/502398467/.vagrant.d/boxes/buddy/0/virtualbox/box.ovf"]
+
+Stderr: 0%...
+Progress state: VBOX_E_FILE_ERROR
+VBoxManage.exe: error: Appliance read failed
+VBoxManage.exe: error: Could not read OVF file 'box.ovf' (VERR_FILE_NOT_FOUND)
+VBoxManage.exe: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component Appliance, interface IAppliance
+VBoxManage.exe: error: Context: "int __cdecl handleImportAppliance(struct HandlerArg *)" at line 304 of file VBoxManageAppliance.cpp
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1]
+E, [2015-02-24T19:23:01.505596 #8220] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-02-24T19:23:01.505596 #8220] ERROR -- Kitchen: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2015-02-24T19:23:01.505596 #8220] ERROR -- Kitchen: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'buddy'...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["import", "-n", "C:/Users/502398467/.vagrant.d/boxes/buddy/0/virtualbox/box.ovf"]
+
+Stderr: 0%...
+Progress state: VBOX_E_FILE_ERROR
+VBoxManage.exe: error: Appliance read failed
+VBoxManage.exe: error: Could not read OVF file 'box.ovf' (VERR_FILE_NOT_FOUND)
+VBoxManage.exe: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component Appliance, interface IAppliance
+VBoxManage.exe: error: Context: "int __cdecl handleImportAppliance(struct HandlerArg *)" at line 304 of file VBoxManageAppliance.cpp
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1
+E, [2015-02-24T19:23:01.505596 #8220] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-02-24T19:23:01.505596 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:69:in `rescue in run_command'
+E, [2015-02-24T19:23:01.505596 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2015-02-24T19:23:01.506096 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/base.rb:182:in `run_command'
+E, [2015-02-24T19:23:01.506096 #8220] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:123:in `run'
+E, [2015-02-24T19:23:01.506096 #8220] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:68:in `create'
+E, [2015-02-24T19:23:01.506096 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-02-24T19:23:01.506096 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-02-24T19:23:01.506096 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `call'
+E, [2015-02-24T19:23:01.506096 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `block in synchronize_or_call'
+E, [2015-02-24T19:23:01.506096 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize'
+E, [2015-02-24T19:23:01.506096 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize_or_call'
+E, [2015-02-24T19:23:01.506096 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-02-24T19:23:01.506596 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2015-02-24T19:23:01.506596 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-02-24T19:23:01.506596 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-02-24T19:23:01.506596 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:303:in `create_action'
+E, [2015-02-24T19:23:01.506596 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-02-24T19:23:01.506596 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-02-24T19:23:01.506596 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-02-24T19:23:01.507096 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:130:in `converge'
+E, [2015-02-24T19:23:01.507096 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-02-24T19:23:01.507096 #8220] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-02-24T19:23:01.507096 #8220] ERROR -- Kitchen: ----------------------
+I, [2015-02-24T19:26:07.764248 #4084]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T19:26:08.435333 #4084]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+E, [2015-02-24T19:27:40.340004 #4084] ERROR -- Kitchen: ------Exception-------
+E, [2015-02-24T19:27:40.340504 #4084] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2015-02-24T19:27:40.340504 #4084] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'buddy'...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["import", "-n", "C:/Users/502398467/.vagrant.d/boxes/buddy/0/virtualbox/box.ovf"]
+
+Stderr: 0%...
+Progress state: VBOX_E_FILE_ERROR
+VBoxManage.exe: error: Appliance read failed
+VBoxManage.exe: error: Start tag expected, '<' not found.
+VBoxManage.exe: error: Location: 'C:\Users\502398467\.vagrant.d\boxes\buddy\0\virtualbox\box.ovf', line 1 (0), column 1
+VBoxManage.exe: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component Appliance, interface IAppliance
+VBoxManage.exe: error: Context: "int __cdecl handleImportAppliance(struct HandlerArg *)" at line 304 of file VBoxManageAppliance.cpp
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1]
+E, [2015-02-24T19:27:40.340504 #4084] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-02-24T19:27:40.341004 #4084] ERROR -- Kitchen: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2015-02-24T19:27:40.341004 #4084] ERROR -- Kitchen: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'buddy'...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["import", "-n", "C:/Users/502398467/.vagrant.d/boxes/buddy/0/virtualbox/box.ovf"]
+
+Stderr: 0%...
+Progress state: VBOX_E_FILE_ERROR
+VBoxManage.exe: error: Appliance read failed
+VBoxManage.exe: error: Start tag expected, '<' not found.
+VBoxManage.exe: error: Location: 'C:\Users\502398467\.vagrant.d\boxes\buddy\0\virtualbox\box.ovf', line 1 (0), column 1
+VBoxManage.exe: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component Appliance, interface IAppliance
+VBoxManage.exe: error: Context: "int __cdecl handleImportAppliance(struct HandlerArg *)" at line 304 of file VBoxManageAppliance.cpp
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1
+E, [2015-02-24T19:27:40.341004 #4084] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-02-24T19:27:40.341004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:69:in `rescue in run_command'
+E, [2015-02-24T19:27:40.341004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2015-02-24T19:27:40.341004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/base.rb:182:in `run_command'
+E, [2015-02-24T19:27:40.341504 #4084] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:123:in `run'
+E, [2015-02-24T19:27:40.341504 #4084] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:68:in `create'
+E, [2015-02-24T19:27:40.341504 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-02-24T19:27:40.341504 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-02-24T19:27:40.342004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `call'
+E, [2015-02-24T19:27:40.342004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `block in synchronize_or_call'
+E, [2015-02-24T19:27:40.342004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize'
+E, [2015-02-24T19:27:40.343004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize_or_call'
+E, [2015-02-24T19:27:40.343004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-02-24T19:27:40.343004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2015-02-24T19:27:40.343004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-02-24T19:27:40.343004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-02-24T19:27:40.343004 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:303:in `create_action'
+E, [2015-02-24T19:27:40.343504 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-02-24T19:27:40.343504 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-02-24T19:27:40.343504 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-02-24T19:27:40.343504 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:130:in `converge'
+E, [2015-02-24T19:27:40.343504 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-02-24T19:27:40.343504 #4084] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-02-24T19:27:40.343504 #4084] ERROR -- Kitchen: ----------------------
+I, [2015-02-24T19:35:15.935857 #9732]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T19:35:16.629445 #9732]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+E, [2015-02-24T19:36:46.630374 #9732] ERROR -- Kitchen: ------Exception-------
+E, [2015-02-24T19:36:46.630874 #9732] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2015-02-24T19:36:46.630874 #9732] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'buddy'...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["import", "-n", "C:/Users/502398467/.vagrant.d/boxes/buddy/0/virtualbox/box.ovf"]
+
+Stderr: 0%...
+Progress state: VBOX_E_FILE_ERROR
+VBoxManage.exe: error: Appliance read failed
+VBoxManage.exe: error: Start tag expected, '<' not found.
+VBoxManage.exe: error: Location: 'C:\Users\502398467\.vagrant.d\boxes\buddy\0\virtualbox\box.ovf', line 1 (0), column 1
+VBoxManage.exe: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component Appliance, interface IAppliance
+VBoxManage.exe: error: Context: "int __cdecl handleImportAppliance(struct HandlerArg *)" at line 304 of file VBoxManageAppliance.cpp
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1]
+E, [2015-02-24T19:36:46.630874 #9732] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-02-24T19:36:46.630874 #9732] ERROR -- Kitchen: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2015-02-24T19:36:46.631374 #9732] ERROR -- Kitchen: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'buddy'...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["import", "-n", "C:/Users/502398467/.vagrant.d/boxes/buddy/0/virtualbox/box.ovf"]
+
+Stderr: 0%...
+Progress state: VBOX_E_FILE_ERROR
+VBoxManage.exe: error: Appliance read failed
+VBoxManage.exe: error: Start tag expected, '<' not found.
+VBoxManage.exe: error: Location: 'C:\Users\502398467\.vagrant.d\boxes\buddy\0\virtualbox\box.ovf', line 1 (0), column 1
+VBoxManage.exe: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component Appliance, interface IAppliance
+VBoxManage.exe: error: Context: "int __cdecl handleImportAppliance(struct HandlerArg *)" at line 304 of file VBoxManageAppliance.cpp
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1
+E, [2015-02-24T19:36:46.631374 #9732] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-02-24T19:36:46.631374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:69:in `rescue in run_command'
+E, [2015-02-24T19:36:46.631374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2015-02-24T19:36:46.631374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/base.rb:182:in `run_command'
+E, [2015-02-24T19:36:46.631874 #9732] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:123:in `run'
+E, [2015-02-24T19:36:46.631874 #9732] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:68:in `create'
+E, [2015-02-24T19:36:46.631874 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-02-24T19:36:46.631874 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-02-24T19:36:46.631874 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `call'
+E, [2015-02-24T19:36:46.631874 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `block in synchronize_or_call'
+E, [2015-02-24T19:36:46.632374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize'
+E, [2015-02-24T19:36:46.632374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize_or_call'
+E, [2015-02-24T19:36:46.632374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-02-24T19:36:46.632374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2015-02-24T19:36:46.632374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-02-24T19:36:46.632374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-02-24T19:36:46.632874 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:303:in `create_action'
+E, [2015-02-24T19:36:46.632874 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-02-24T19:36:46.632874 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-02-24T19:36:46.632874 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-02-24T19:36:46.633374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:130:in `converge'
+E, [2015-02-24T19:36:46.633374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-02-24T19:36:46.633374 #9732] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-02-24T19:36:46.633374 #9732] ERROR -- Kitchen: ----------------------
+I, [2015-02-24T20:01:06.309229 #19192]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T20:01:06.971313 #19192]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+E, [2015-02-24T20:02:36.548188 #19192] ERROR -- Kitchen: ------Exception-------
+E, [2015-02-24T20:02:36.548688 #19192] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2015-02-24T20:02:36.548688 #19192] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'buddy'...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["import", "-n", "C:/Users/502398467/.vagrant.d/boxes/buddy/0/virtualbox/box.ovf"]
+
+Stderr: 0%...
+Progress state: VBOX_E_FILE_ERROR
+VBoxManage.exe: error: Appliance read failed
+VBoxManage.exe: error: Start tag expected, '<' not found.
+VBoxManage.exe: error: Location: 'C:\Users\502398467\.vagrant.d\boxes\buddy\0\virtualbox\box.ovf', line 1 (0), column 1
+VBoxManage.exe: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component Appliance, interface IAppliance
+VBoxManage.exe: error: Context: "int __cdecl handleImportAppliance(struct HandlerArg *)" at line 304 of file VBoxManageAppliance.cpp
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1]
+E, [2015-02-24T20:02:36.549188 #19192] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-02-24T20:02:36.549188 #19192] ERROR -- Kitchen: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2015-02-24T20:02:36.549188 #19192] ERROR -- Kitchen: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'buddy'...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["import", "-n", "C:/Users/502398467/.vagrant.d/boxes/buddy/0/virtualbox/box.ovf"]
+
+Stderr: 0%...
+Progress state: VBOX_E_FILE_ERROR
+VBoxManage.exe: error: Appliance read failed
+VBoxManage.exe: error: Start tag expected, '<' not found.
+VBoxManage.exe: error: Location: 'C:\Users\502398467\.vagrant.d\boxes\buddy\0\virtualbox\box.ovf', line 1 (0), column 1
+VBoxManage.exe: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component Appliance, interface IAppliance
+VBoxManage.exe: error: Context: "int __cdecl handleImportAppliance(struct HandlerArg *)" at line 304 of file VBoxManageAppliance.cpp
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1
+E, [2015-02-24T20:02:36.549688 #19192] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-02-24T20:02:36.549688 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:69:in `rescue in run_command'
+E, [2015-02-24T20:02:36.549688 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2015-02-24T20:02:36.549688 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/base.rb:182:in `run_command'
+E, [2015-02-24T20:02:36.549688 #19192] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:123:in `run'
+E, [2015-02-24T20:02:36.550188 #19192] ERROR -- Kitchen: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:68:in `create'
+E, [2015-02-24T20:02:36.550188 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-02-24T20:02:36.550188 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-02-24T20:02:36.550188 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `call'
+E, [2015-02-24T20:02:36.550188 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `block in synchronize_or_call'
+E, [2015-02-24T20:02:36.550188 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize'
+E, [2015-02-24T20:02:36.550188 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize_or_call'
+E, [2015-02-24T20:02:36.550688 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-02-24T20:02:36.550688 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2015-02-24T20:02:36.550688 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-02-24T20:02:36.550688 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-02-24T20:02:36.550688 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:303:in `create_action'
+E, [2015-02-24T20:02:36.550688 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-02-24T20:02:36.551189 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-02-24T20:02:36.551189 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-02-24T20:02:36.551189 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:130:in `converge'
+E, [2015-02-24T20:02:36.551189 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-02-24T20:02:36.551189 #19192] ERROR -- Kitchen: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-02-24T20:02:36.551189 #19192] ERROR -- Kitchen: ----------------------
+I, [2015-02-24T20:36:50.031947 #5960]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T20:36:50.697532 #5960]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2015-02-24T20:38:13.382532 #5960]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2015-02-24T20:39:10.901336 #5960]  INFO -- Kitchen: -----> Kitchen is finished. (2m20.87s)
+I, [2015-02-24T20:39:41.804760 #18072]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T20:39:42.560856 #18072]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2015-02-24T20:39:54.251340 #18072]  INFO -- Kitchen: -----> Kitchen is finished. (0m12.45s)
+I, [2015-02-24T20:40:29.207779 #14564]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T20:40:29.871364 #14564]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2015-02-24T20:41:44.162797 #14564]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2015-02-24T20:43:00.019930 #14564]  INFO -- Kitchen: -----> Kitchen is finished. (2m30.81s)
+I, [2015-02-24T20:43:49.909765 #13800]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T20:43:50.620855 #13800]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2015-02-24T20:44:02.299338 #13800]  INFO -- Kitchen: -----> Kitchen is finished. (0m12.39s)
+I, [2015-02-24T20:44:38.573945 #14288]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T20:44:39.230028 #14288]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2015-02-24T20:45:45.345924 #14288]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2015-02-24T20:46:41.948611 #14288]  INFO -- Kitchen: -----> Kitchen is finished. (2m3.37s)
+I, [2015-02-24T20:54:40.836922 #11528]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T20:54:41.540512 #11528]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2015-02-24T20:54:53.879579 #11528]  INFO -- Kitchen: -----> Kitchen is finished. (0m13.04s)
+I, [2015-02-24T20:55:06.524684 #20056]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T20:55:07.242776 #20056]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2015-02-24T20:56:15.483441 #20056]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2015-02-24T20:57:08.774208 #20056]  INFO -- Kitchen: -----> Kitchen is finished. (2m2.25s)
+I, [2015-02-24T20:57:18.824984 #13428]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T20:57:19.482068 #13428]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2015-02-24T20:57:31.721122 #13428]  INFO -- Kitchen: -----> Kitchen is finished. (0m12.89s)
+I, [2015-02-24T20:59:24.003880 #18752]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T20:59:24.695468 #18752]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2015-02-24T21:00:36.027526 #18752]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2015-02-24T21:01:31.615085 #18752]  INFO -- Kitchen: -----> Kitchen is finished. (2m7.61s)
+I, [2015-02-24T21:04:20.771065 #9536]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T21:04:21.625673 #9536]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2015-02-24T21:04:35.039877 #9536]  INFO -- Kitchen: -----> Kitchen is finished. (0m14.27s)
+I, [2015-02-24T21:15:43.553267 #13212]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T21:15:44.247855 #13212]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2015-02-24T21:16:50.293742 #13212]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2015-02-24T21:17:07.655947 #7892]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T21:17:08.368537 #7892]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2015-02-24T21:17:19.609965 #7892]  INFO -- Kitchen: -----> Kitchen is finished. (0m11.95s)
+I, [2015-02-24T21:17:33.758761 #5076]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T21:17:34.398843 #5076]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2015-02-24T21:18:46.870545 #5076]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2015-02-24T21:19:40.392342 #5076]  INFO -- Kitchen: -----> Kitchen is finished. (2m6.63s)
+I, [2015-02-24T21:19:42.538614 #13708]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T21:19:43.199198 #13708]  INFO -- Kitchen: -----> Setting up <default-centos-64>...
+E, [2015-02-24T21:22:35.398565 #13708] ERROR -- Kitchen: Setup failed on instance <default-centos-64>.
+I, [2015-02-24T21:24:57.477106 #18952]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T21:24:58.189697 #18952]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2015-02-24T21:25:10.469256 #18952]  INFO -- Kitchen: -----> Kitchen is finished. (0m12.99s)
+I, [2015-02-24T21:49:43.311890 #22188]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T21:49:44.013979 #22188]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2015-02-24T21:50:58.430928 #22188]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2015-02-24T21:51:52.462290 #22188]  INFO -- Kitchen: -----> Kitchen is finished. (2m9.15s)
+I, [2015-02-24T21:51:58.407544 #21984]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-24T21:51:59.070129 #21984]  INFO -- Kitchen: -----> Setting up <default-centos-64>...
+E, [2015-02-24T21:53:49.003588 #21984] ERROR -- Kitchen: Setup failed on instance <default-centos-64>.
+I, [2015-02-25T09:05:55.741583 #23268]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-02-25T09:05:56.463715 #23268]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2015-02-25T09:06:07.517435 #23268]  INFO -- Kitchen: -----> Kitchen is finished. (0m11.77s)
+I, [2015-03-05T17:26:36.067983 #7240]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+E, [2015-03-05T17:26:36.125983 #7240] ERROR -- Kitchen: ------Exception-------
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: Message: Could not load the 'vagrant' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: Class: LoadError
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: Message: cannot load such file -- kitchen/driver/vagrant
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:226:in `new_driver'
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:240:in `new_instance'
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:129:in `block in build_instances'
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:128:in `map'
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:128:in `with_index'
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:128:in `build_instances'
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:104:in `instances'
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command.rb:115:in `filtered_instances'
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command.rb:145:in `parse_subcommand'
+E, [2015-03-05T17:26:36.126983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command/action.rb:38:in `block in call'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command/action.rb:37:in `call'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/cli.rb:56:in `perform'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/cli.rb:161:in `block (2 levels) in <class:CLI>'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/cli.rb:304:in `invoke_task'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/bin/kitchen:13:in `block in <top (required)>'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/errors.rb:154:in `with_friendly_errors'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/bin/kitchen:13:in `<top (required)>'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/bin/kitchen:23:in `load'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: c:/tools/ruby215/bin/kitchen:23:in `<main>'
+E, [2015-03-05T17:26:36.127983 #7240] ERROR -- Kitchen: ----------------------
+I, [2015-03-05T17:27:05.784082 #6380]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: ------Exception-------
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: Message: Could not load the 'vagrant' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: Class: LoadError
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: Message: cannot load such file -- kitchen/driver/vagrant
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:226:in `new_driver'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:240:in `new_instance'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:129:in `block in build_instances'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:128:in `map'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:128:in `with_index'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:128:in `build_instances'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:104:in `instances'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command.rb:115:in `filtered_instances'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command.rb:145:in `parse_subcommand'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command/action.rb:38:in `block in call'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command/action.rb:37:in `call'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/cli.rb:56:in `perform'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/cli.rb:161:in `block (2 levels) in <class:CLI>'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/cli.rb:304:in `invoke_task'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/bin/kitchen:13:in `block in <top (required)>'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/errors.rb:154:in `with_friendly_errors'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/bin/kitchen:13:in `<top (required)>'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/bin/kitchen:23:in `load'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: c:/tools/ruby215/bin/kitchen:23:in `<main>'
+E, [2015-03-05T17:27:05.844077 #6380] ERROR -- Kitchen: ----------------------
+I, [2015-03-06T08:53:25.150692 #1648]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: ------Exception-------
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: Message: Could not load the 'vagrant' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: Class: LoadError
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: Message: cannot load such file -- kitchen/driver/vagrant
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:226:in `new_driver'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:240:in `new_instance'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:129:in `block in build_instances'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:128:in `map'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:128:in `with_index'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:128:in `build_instances'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/config.rb:104:in `instances'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command.rb:115:in `filtered_instances'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command.rb:145:in `parse_subcommand'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command/action.rb:38:in `block in call'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/command/action.rb:37:in `call'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/cli.rb:56:in `perform'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/cli.rb:161:in `block (2 levels) in <class:CLI>'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/cli.rb:304:in `invoke_task'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/bin/kitchen:13:in `block in <top (required)>'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/lib/kitchen/errors.rb:154:in `with_friendly_errors'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/lib/ruby/gems/2.1.0/gems/test-kitchen-1.3.1/bin/kitchen:13:in `<top (required)>'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/bin/kitchen:23:in `load'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: c:/tools/ruby215/bin/kitchen:23:in `<main>'
+E, [2015-03-06T08:53:25.200692 #1648] ERROR -- Kitchen: ----------------------
+I, [2015-03-06T11:04:30.181873 #9000]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-03-06T11:04:30.783899 #9000]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2015-03-06T11:08:06.491209 #9448]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-03-06T11:08:07.084235 #9448]  INFO -- Kitchen: -----> Creating <default-centos-66>...
+I, [2015-03-06T11:10:42.769177 #9448]  INFO -- Kitchen: -----> Converging <default-centos-66>...
+I, [2015-03-06T11:11:10.369182 #9448]  INFO -- Kitchen: -----> Kitchen is finished. (3m3.88s)
+I, [2015-03-06T11:17:17.132255 #6072]  INFO -- Kitchen: -----> Starting Kitchen (v1.3.1)
+I, [2015-03-06T11:17:17.775337 #6072]  INFO -- Kitchen: -----> Destroying <default-centos-66>...
+I, [2015-03-06T11:17:27.870486 #6072]  INFO -- Kitchen: -----> Kitchen is finished. (0m10.74s)

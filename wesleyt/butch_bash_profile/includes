@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#these are profile files to include if they
+#exist
+dotit(){
+  if [ -f "$BASHFILES/$1" ]; then
+    eval ". $BASHFILES/$1"
+  fi
+}
+
+#load the template first, then load any file
+#to overwrite it.
+usetemplate(){
+  eval ". $BASHFILES/templates/$1"
+  
+  if [ -f "$BASHFILES/$1" ]; then
+    eval ". $BASHFILES/$1"
+  fi
+
+}
+#old "local" file is now pre_local
+#local should be removed and replaced
+#with pre_local
+dotit "text_format"
+usetemplate "config"
+usetemplate "prompt"
+dotit "local"
+dotit "pre_local"
+dotit "main" 
+dotit "post_local"
+dotit "tmux_shortcuts"

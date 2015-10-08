@@ -1,0 +1,7 @@
+name 'library'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures library'
+long_description 'Installs/Configures library'
+version '0.1.0'

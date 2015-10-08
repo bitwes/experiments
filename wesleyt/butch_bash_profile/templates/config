@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#any color.  Can use vars defined in text_format
+export BBP_PROMPT_COLOR=$txtcyn
+
+#Include the svn path in the prompt Y/N
+export BBP_SVN_PROMPT='N'
+#Use an indicator instead of the full svn path in the prompt
+#Set to 'N' to use the path, anything else is the indicator.
+export BBP_SVN_PROMPT_IND='N'
+
+#used by the xfer methods.  Simplifies putting everything
+#in one place.
+#<user>@<server>:<path>
+export BBP_XFER_SCP='wesleyt@nbcbanwfjobt:~/xfer/'

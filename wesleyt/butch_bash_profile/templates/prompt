@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#get SVN path for current directory or null, color is 
+#green if no changes, purple if there are changes.
+svnpath(){
+    if [ $BBP_SVN_PROMPT == 'Y' ]
+    then 
+        local changes=`svn status 2>/dev/null`
+        local change_color=$BBP_PROMPT_COLOR
+        
+        if [ "$changes" != "" ]
+            then
+            change_color=$txtpur
+        fi
+        
+        #local cur_repo=`svn info 2>/dev/null| grep "URL:"`        
+        #strip off "URL: http://"
+        cur_repo=`perl $BASHFILES/svn_utils.pl -get_substr_repo`
+        
+        #shoot out the path
+        if [ "$cur_repo" != "" ]
+            then
+            if [ $BBP_SVN_PROMPT_IND == 'N' ]
+                then
+                echo " $change_color<$cur_repo>"
+            else
+                echo " $change_color$BBP_SVN_PROMPT_IND"
+            fi
+        fi
+    fi
+}
+
+#[<username> <svn path>]$
+export PS1="\e$BBP_PROMPT_COLOR[\u\$(svnpath)$BBP_PROMPT_COLOR]\$\e[m "
+export SVN_REMOTE_ROOT="http://svn"

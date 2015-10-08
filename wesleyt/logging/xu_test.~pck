@@ -1,0 +1,205 @@
+create or replace package xut is
+  procedure assert(in_bool in boolean, in_msg in varchar2);
+  procedure assert_eq(in_got in number, in_expected in number, in_msg in varchar2);
+  procedure assert_eq(in_got in varchar2, in_expected in varchar2, in_msg in varchar2);
+  procedure assert_errors(in_to_run in varchar2);
+  procedure assert_no_error(in_to_run in varchar2);
+
+  procedure set_unit(in_unit in varchar2);
+  procedure init_test(in_test_name in varchar2);
+  procedure end_test;
+  function get_fail_count return number;
+  
+  
+  procedure run_package_tests(in_pkg_name in varchar2);
+end xut;
+/
+create or replace package body xut is
+  g_cur_test_name         varchar2(100);
+  g_fail_count            number := 0;
+  g_unit                  varchar2(100);
+  g_has_printed_unit      boolean := false;  
+  g_test_count            number := 0;
+
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  procedure run_method(in_method in varchar2)
+  is
+  begin
+    execute immediate 'begin '||in_method||'; end;';
+  end;
+  
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  procedure test
+  is
+  begin
+    g_test_count := g_test_count + 1;
+  end;
+  
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  procedure p(in_text in varchar2, in_indent number default 0)is
+    l_indent    varchar2(100) := '';
+  begin
+    if(in_indent > 0)then
+      l_indent := lpad(' ', in_indent, '  ');
+    end if;
+    dbms_output.put_line(l_indent||in_text);
+  end;
+
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------  
+  procedure fail(in_text in varchar2)is
+  begin
+    if(not g_has_printed_unit)then
+      if(g_unit is not null)then
+        p(g_unit, 1);
+      end if;
+      g_has_printed_unit := true;
+    end if;
+    p('FAILED:  '||in_text, 2);
+    g_fail_count := g_fail_count + 1;
+  end;
+  
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  procedure assert(in_bool in boolean, in_msg in varchar2)
+  is
+  begin
+    test;
+    if(not nvl(in_bool, false))then
+      fail(in_msg);
+    end if;
+  end;
+
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  procedure assert_eq(in_got in number, in_expected in number, in_msg in varchar2)
+  is
+  begin
+    test;
+    if(in_got is not null and in_expected is null or in_got is null and in_expected is not null or in_got <> in_expected)then
+      fail(in_msg||'['||'Expected "'||in_expected||'" but got "'||in_got||'"]');
+    end if;
+  end;
+  
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  procedure assert_eq(in_got in varchar2, in_expected in varchar2, in_msg in varchar2)
+  is
+  begin
+    test;
+    if(in_got is not null and in_expected is null or in_got is null and in_expected is not null or in_got <> in_expected)then
+      fail(in_msg||'['||'Expected "'||in_expected||'" but got "'||in_got||'"]');
+    end if;  
+  end;
+  
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  procedure init_test(in_test_name in varchar2)
+  is
+  begin
+    g_cur_test_name := in_test_name;
+    g_fail_count := 0;
+    g_test_count := 0;
+    g_unit := '';
+    g_has_printed_unit := false;
+
+    p('Test:  '||g_cur_test_name);
+  end;
+  
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  procedure set_unit(in_unit in varchar2)
+  is
+  begin
+    g_unit := in_unit;
+    g_has_printed_unit := false;
+  end;
+  
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  procedure end_test
+  is
+  begin    
+    if(g_fail_count > 0)then
+      p('FAILURE:  '||g_fail_count||' of '||g_test_count||' failed.');
+    else
+      p('SUCCESS:  All '||g_test_count||' tests passed.');
+    end if;
+  end;
+  
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  function get_fail_count return number
+  is
+  begin
+    return g_fail_count;
+  end;
+  
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  procedure assert_errors(in_to_run in varchar2)
+  is
+  begin    
+    test;
+    run_method(in_to_run);
+    fail(in_to_run||' Should have errored out.');
+  exception
+    when others then
+      null;
+  end;
+
+  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------    
+  procedure assert_no_error(in_to_run in varchar2)
+  is
+  begin  
+    test;  
+    run_method(in_to_run);    
+  exception
+    when others then
+      fail(in_to_run||' Should not have errored out.');
+  end;
+  
+  -----------------------------------------------------------------------------
+  --runs all methods in the passed in package that start with TEST_.  These
+  --methods are run in the order that they are declared.  This starts a new test
+  --for the package and each method is a unit.
+  -----------------------------------------------------------------------------    
+  procedure run_package_tests(in_pkg_name in varchar2)
+  is
+    l_pkg_name    varchar2(100);
+    l_count       number;
+    l_to_run       varchar2(100);
+    cursor c_tests is
+      select procedure_name
+        from all_procedures
+       where object_type = 'PACKAGE'
+         and object_name = l_pkg_name
+         and procedure_name like ('TEST_%')
+       order by subprogram_id;
+       
+  begin
+    l_pkg_name := upper(in_pkg_name);
+    select count(1)
+      into l_count
+      from all_objects
+     where object_name = l_pkg_name;
+    if(l_count = 0)then
+      p('Could not find package '||in_pkg_name);
+    else
+      init_test(l_pkg_name);
+      for rec in c_tests loop
+        set_unit(rec.procedure_name);
+        
+        l_to_run := l_pkg_name||'.'||rec.procedure_name;
+        p(l_to_run);
+        run_method(l_to_run);        
+      end loop;
+      end_test;
+    end if;      
+  end;
+end xut;
+/

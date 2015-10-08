@@ -1,0 +1,18 @@
+Parameters for RMS
+
+RMS
+	Export Profile
+		App Periods
+		Terms
+	Import Profile
+		<none>
+
+
+Banner ZGBPARM
+
+bursar_housing_export	housing	bursar_housing_term	10S	11/24/2009 11:00:01 PM	12/31/2099
+mailbox_changes	housing	mailbox_housing_term	13S	1/23/2013 11:40:40 AM	12/31/2099
+rms_database_export	housing	earliest_moveout_date	01-JAN-13	1/9/2013	7/31/2013
+zsthosx_add_new_apps	housing	app_term	201309	1/23/2013 11:40:40 AM	12/31/2099
+zsthosx_add_new_apps	housing	rms_app_year	13-14New	1/31/2013 3:43:48 PM	12/31/2099
+zsthosx_add_new_apps	housing	rms_app_yr_desc	2013-14 New Students	1/31/2013 3:43:48 PM	12/31/2099

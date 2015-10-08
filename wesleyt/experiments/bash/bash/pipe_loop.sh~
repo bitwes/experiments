@@ -1,0 +1,6 @@
+#!/bin/bash
+
+read j
+while [ "$j" != "" ]; do
+    echo "hey $j"
+done

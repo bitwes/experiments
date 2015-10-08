@@ -1,0 +1,45 @@
+#!/bin/bash
+
+alias ta='tmux attach'
+alias tls='tmux ls'
+
+#Enable/disable all the mouse features of tmux.
+#$1 is optional.  If not specified it will toggle
+#all the values, otherwise the valid values are 
+#'on' and 'off'.
+tmux_mouse(){
+    tmux set-option mouse-select-pane $1
+    tmux set-option mouse-select-window $1
+    tmux set-option mouse-resize-pane $1
+    tmux set-option mouse-utf8 on
+}
+
+#Stash a pane away for later use.  Puts all stashed panes in
+#the pane-stash window.  This window is created if it does
+#not exist.
+tmux_stash_pane(){
+    echo "----------------------------"
+    echo "  stashed from: " `tmux display-message -p '#W'`
+    #Display the note
+    if [ "$1" != "" ]; then
+        echo "  $1"
+    fi
+    echo "----------------------------"
+
+    local window_exists=`tmux list-windows | grep pane-stash`
+    if [ "$window_exists" == "" ]; then
+        tmux new-window -n pane-stash -d
+    fi
+    
+    #should get the number of panes here and use that
+    #to set it.
+    #tmux list-panes -t pane-stash -F '#I'
+    tmux join-pane -d -t pane-stash.0
+
+    #if the window was created this time, then kill
+    #the pane that was created when the window was
+    #created.
+    if [ "$window_exists" == "" ]; then
+        tmux kill-pane -t pane-stash.0
+    fi
+}

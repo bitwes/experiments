@@ -1,0 +1,21 @@
+Make a person
+	Spriden
+		Required
+			first name
+			last name
+		Generated
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

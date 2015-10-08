@@ -1,0 +1,256 @@
+create or replace package xu_test_tester is
+  procedure raises_neg_20001;  
+
+  procedure does_nothing;
+     
+     end    xu_test_tester     ;    
+     
+     
+--Leave the line above alone, it makes sure that 
+--the parser thandles everything ok.     
+
+
+    
+     --These are some comments to make sure that the 
+     --parser handles things ok
+/
+create or replace package body xu_test_tester is
+  g_fail_count            number := 0;
+  g_setup_call_count      number := 0;
+  g_teardown_call_count   number := 0;
+  
+  procedure print_expected_fail(in_num in number)
+  is
+  begin
+    g_fail_count := g_fail_count + in_num;
+    xut.p('<'||in_num||' expected failures>', 1);
+  end;
+
+  procedure testprerunsetup
+  is
+  begin
+    xut.print('## pretest setup ran');
+  end;
+  
+  procedure testpostrunteardown
+  is
+  begin
+    xut.print('##posttestteardown ran');
+  end;
+  
+  procedure testsetup
+  is
+  begin
+    if(not xut.is_running)then
+      xut.assert(false, 'This should only be run when testing.');
+      return;
+    end if;
+  
+    g_setup_call_count := g_setup_call_count + 1;
+  end;
+
+  procedure testteardown
+  is
+  begin
+    if(not xut.is_running)then
+      xut.assert(false, 'This should only be run when testing.');
+      return;
+    end if;
+
+    g_teardown_call_count := g_teardown_call_count + 1;
+  end;
+  
+  
+--***************************************************************************--
+procedure test_display_fail_disclaimer
+is
+begin
+  xut.p('----------------------------------------');
+  xut.p('The following tests should fail.  The number ');
+  xut.p('of times they fail should be printed.');
+  xut.p('----------------------------------------');    
+end;
+--***************************************************************************--
+
+  procedure test_fail_assert
+  is
+  begin
+    print_expected_fail(1);
+    xut.assert(false, 'This should fail!');
+  end;
+ 
+ 
+  procedure test_fail_assert_eq_num
+  is
+  begin
+    print_expected_fail(3);  
+    xut.assert_eq(1, 2, 'Should fail 1 != 2');
+    xut.assert_eq(null, 2, 'Should fail null != 2');
+    xut.assert_eq(2, null, 'Should fail 2!= null');    
+  end;
+
+  procedure test_fail_assert_eq_var
+  is  
+  begin
+    print_expected_fail(3);
+    xut.assert_eq('asdf', null, 'Should fail ''asdf'' != null');
+    xut.assert_eq(null, 'asdf', 'Should fail null != ''asdf''');
+    xut.assert_eq('asdf', 'qwert', 'Should fail ''asdf'' != ''qwert''');
+  end;
+
+  procedure test_fail_due_to_error
+  is
+  begin
+    print_expected_fail(1);
+    raise_application_error(-20001, 'This error should cause test to fail.');
+  end;
+    
+  procedure test_fail_assert_errors
+  is
+  begin
+    print_expected_fail(1);
+    xut.assert_errors('xu_test_tester.does_nothing', -20001);
+  end;
+  
+  procedure test_fail_asrt_errors_bad_err
+  is
+  begin
+    print_expected_fail(1);
+    xut.assert_errors('xu_test_tester.raises_neg_20001', -20222);
+  end;
+  
+  procedure test_fail_assert_no_error
+  is
+  begin
+    print_expected_fail(1);
+    xut.assert_no_error('xu_test_tester.raises_neg_20001');
+  end;
+
+
+--***************************************************************************--  
+procedure test_display_pass_disclaimer
+is
+begin
+  xut.p('----------------------------------------');
+  xut.p('The following tests should pass.');
+  xut.p('----------------------------------------');    
+end;
+--***************************************************************************--
+
+
+  procedure test_pass_assert
+  is
+  begin
+    xut.assert(true, 'This better pass.');
+  end;
+
+  procedure test_pass_assert_eq_num
+  is
+    num1      number := null;
+    num2      number := null;
+  begin
+    xut.assert_eq(num1, num2, 'Should pass.');
+    num1 := 1;
+    num2 := 1;
+    xut.assert_eq(num1, num2, 'Should pass.');
+  end;
+  
+  procedure test_pass_assert_eq_var
+  is
+    str1      varchar2(10) := null;
+    str2      varchar2(10) := null;
+  begin
+    xut.assert_eq(str1, str2, 'Should pass.');
+    str1 := 'asdf';
+    str2 := 'asdf';
+    xut.assert_eq(str1, str2, 'Should pass.');
+  end;  
+  
+  procedure test_pass_assert_errors
+  is
+  begin
+    xut.assert_errors('xu_test_tester.raises_neg_20001', -20001);
+  end;
+  
+  procedure test_pass_assert_no_error 
+  is
+  begin
+    xut.assert_no_error('xu_test_tester.does_nothing');
+  end;
+
+--***************************************************************************--
+--This section contains examples of valid test method declerations.  Invalid
+--declerations cannot be included here or xut won't be able to compile the
+--package.  Whenever a problem with the parser is discovered a test
+--should be added here.
+procedure test_display_parser_disclaimer
+is
+begin
+  xut.p('----------------------------------------');
+  xut.p('The following tests just make sure that the ');
+  xut.p('logic that parses out test methods from body ');
+  xut.p('works as expected.');
+  xut.p('----------------------------------------');
+end;
+--***************************************************************************-- 
+
+  procedure test_is_on_same_line is
+  begin
+    null;
+  end;
+
+  procedure test_comment_on_line--this is a comment
+  is
+  begin
+    null;
+  end;
+  
+  procedure test_test_test_the_test
+  is
+  begin
+    null;
+  end;
+  
+--***************************************************************************--  
+procedure test_disp_summary_disclaimer
+is
+begin
+  xut.p('----------------------------------------');
+  xut.print('Summary (this section should contain NO errors)');
+
+  --setup - 1 == teardown  since the teardown for THIS test 
+  --has not yet been run.  when neither are run though it gets messy since they are equal
+  --(both are 0) but we are comparing them as if setup shoud be greater.  Other errors
+  --occur when they are not called though, and these should be addressed first.
+  xut.p('  Setup called:     '||(g_setup_call_count - 1));
+  xut.p('  Teardown called:  '||g_teardown_call_count);
+  xut.assert(g_setup_call_count > 0, 'Setup was NOT called.');
+  xut.assert(g_teardown_call_count > 0, 'Teardown was NOT called.');
+  xut.assert(g_setup_call_count - 1 = g_teardown_call_count , 
+    'Setup and teardown calls should be equal.  These will also not equal if they were never called.');
+
+  xut.p('  '||g_fail_count||' tests should have failed.');
+  xut.assert(xut.get_fail_count = g_fail_count,
+    'Expected fail count should match XUT fail count');
+          
+  xut.p('----------------------------------------');
+end;
+--***************************************************************************--
+
+
+--------------------------
+--Public methods
+--------------------------
+  procedure raises_neg_20001
+  is
+  begin
+    raise_application_error(-20001, 'This error is raised on purpose.');
+  end;  
+  
+  procedure does_nothing
+  is
+  begin
+    null;
+  end;  
+end xu_test_tester;
+/

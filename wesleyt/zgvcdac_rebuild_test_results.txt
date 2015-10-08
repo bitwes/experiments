@@ -1,0 +1,85 @@
+*****************************************************
+**Run 1
+*****************************************************
+**zgvcdac.sql output
+**********************
+SQL> @C:\svnrepo\branches\td4004_montessori\persona\zgvcdac.sql
+TIME
+-----------------
+08/08/13 11:35:29
+NEW_VIEW_NAME                  OLD_VIEW_NAME
+------------------------------ ------------------------------
+ZGVCDAC_A                      ZGVCDAC
+Materialized view created
+TIME
+-----------------
+08/08/13 11:42:03
+Synonym dropped
+Synonym created
+TIME
+-----------------
+08/08/13 11:42:03
+Materialized view dropped
+TIME
+-----------------
+08/08/13 11:42:12
+  COUNT(1)
+----------
+     52257
+
+SQL> 
+**********************
+** count script output
+**********************
+
+11:35:27  52258
+11:35:29  52257
+11:46:24  ORA-01013: user requested cancel of current operation
+
+
+*****************************************************
+**Run 2
+*****************************************************
+SQL> @C:\svnrepo\branches\td4004_montessori\persona\zgvcdac.sql
+TIME
+-----------------
+08/08/13 11:49:37
+NEW_VIEW_NAME                  OLD_VIEW_NAME
+------------------------------ ------------------------------
+ZGVCDAC_B                      ZGVCDAC_A
+Materialized view created
+TIME
+-----------------
+08/08/13 11:56:04
+Synonym dropped
+Synonym created
+TIME
+-----------------
+08/08/13 11:56:04
+Materialized view dropped
+TIME
+-----------------
+08/08/13 12:01:10
+  COUNT(1)
+----------
+     52257
+     
+**********************
+** count script output
+**********************
+     
+11:49:34  52257
+11:58:18  ORA-01013: user requested cancel of current operation
+11:58:26  52257
+12:01:14  ORA-01013: user requested cancel of current operation
+
+
+
+
+*****************************************************
+OLD WAY RUN (COUNT SCRIPT)
+*****************************************************
+12:15:43  52236
+12:16:56  -942
+12:23:18  52236
+12:25:23  ORA-01013: user requested cancel of current operation

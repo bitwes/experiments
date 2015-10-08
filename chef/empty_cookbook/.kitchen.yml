@@ -1,0 +1,20 @@
+---
+
+driver:
+  name: vagrant
+
+driver_config:
+  require_chef_omnibus: true
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: centos-6.6
+    driver:
+      box: converged_box
+suites:
+  - name: default
+    run_list:
+
+    attributes:

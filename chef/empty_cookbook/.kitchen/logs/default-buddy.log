@@ -1,0 +1,74 @@
+I, [2015-02-24T19:17:39.082833 #19508]  INFO -- default-buddy: -----> Creating <default-buddy>...
+I, [2015-02-24T19:17:41.459969 #19508]  INFO -- default-buddy: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2015-02-24T19:17:45.577204 #19508]  INFO -- default-buddy: ==> default: Box 'opscode-buddy' could not be found. Attempting to find and install...
+I, [2015-02-24T19:17:45.577204 #19508]  INFO -- default-buddy:     default: Box Provider: virtualbox
+I, [2015-02-24T19:17:45.578204 #19508]  INFO -- default-buddy:     default: Box Version: >= 0
+I, [2015-02-24T19:17:46.386251 #19508]  INFO -- default-buddy: ==> default: Adding box 'opscode-buddy' (v0) for provider: virtualbox
+I, [2015-02-24T19:17:46.387251 #19508]  INFO -- default-buddy:     default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_buddy_chef-provisionerless.box
+I, [2015-02-24T19:17:46.942282 #19508]  INFO -- default-buddy: [K    default: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    default: 
+I, [2015-02-24T19:17:46.954283 #19508]  INFO -- default-buddy: An error occurred while downloading the remote file. The error
+I, [2015-02-24T19:17:46.954283 #19508]  INFO -- default-buddy: message, if any, is reproduced below. Please fix this error and try
+I, [2015-02-24T19:17:46.954283 #19508]  INFO -- default-buddy: again.
+I, [2015-02-24T19:17:46.954283 #19508]  INFO -- default-buddy: 
+I, [2015-02-24T19:17:46.955283 #19508]  INFO -- default-buddy: The requested URL returned error: 404 Not Found
+E, [2015-02-24T19:17:47.047288 #19508] ERROR -- default-buddy: Create failed on instance <default-buddy>.
+E, [2015-02-24T19:17:47.047288 #19508] ERROR -- default-buddy: ------Exception-------
+E, [2015-02-24T19:17:47.047288 #19508] ERROR -- default-buddy: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2015-02-24T19:17:47.048288 #19508] ERROR -- default-buddy: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'opscode-buddy' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Adding box 'opscode-buddy' (v0) for provider: virtualbox
+    default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_buddy_chef-provisionerless.box
+[K    default: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    default:
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+The requested URL returned error: 404 Not Found
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1
+E, [2015-02-24T19:17:47.048288 #19508] ERROR -- default-buddy: ---Nested Exception---
+E, [2015-02-24T19:17:47.048288 #19508] ERROR -- default-buddy: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2015-02-24T19:17:47.048288 #19508] ERROR -- default-buddy: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'opscode-buddy' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Adding box 'opscode-buddy' (v0) for provider: virtualbox
+    default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_buddy_chef-provisionerless.box
+[K    default: Progress: 0% (Rate: 0/s, Estimated time remaining: --:--:--)[K    default:
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+The requested URL returned error: 404 Not Found
+---- End output of vagrant up --no-provision --provider=virtualbox ----
+Ran vagrant up --no-provision --provider=virtualbox returned 1
+E, [2015-02-24T19:17:47.048288 #19508] ERROR -- default-buddy: ------Backtrace-------
+E, [2015-02-24T19:17:47.048288 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:69:in `rescue in run_command'
+E, [2015-02-24T19:17:47.049288 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2015-02-24T19:17:47.049288 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/base.rb:182:in `run_command'
+E, [2015-02-24T19:17:47.049288 #19508] ERROR -- default-buddy: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:123:in `run'
+E, [2015-02-24T19:17:47.049288 #19508] ERROR -- default-buddy: c:/Users/502398467/.chefdk/gem/ruby/2.0.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:68:in `create'
+E, [2015-02-24T19:17:47.049288 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-02-24T19:17:47.049288 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-02-24T19:17:47.049288 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `call'
+E, [2015-02-24T19:17:47.049288 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:413:in `block in synchronize_or_call'
+E, [2015-02-24T19:17:47.049288 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize'
+E, [2015-02-24T19:17:47.049288 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:411:in `synchronize_or_call'
+E, [2015-02-24T19:17:47.049288 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-02-24T19:17:47.050289 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2015-02-24T19:17:47.050289 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-02-24T19:17:47.050289 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-02-24T19:17:47.050289 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:303:in `create_action'
+E, [2015-02-24T19:17:47.050289 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-02-24T19:17:47.050289 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-02-24T19:17:47.050289 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-02-24T19:17:47.050289 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:130:in `converge'
+E, [2015-02-24T19:17:47.050289 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-02-24T19:17:47.050289 #19508] ERROR -- default-buddy: c:/opscode/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-02-24T19:17:47.050289 #19508] ERROR -- default-buddy: ----------------------

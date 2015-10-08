@@ -1,0 +1,262 @@
+
+
+*** EVERYONE User Class ***
+()EVERYONE
+  +  SDWORKS 
+  +  SEPTEDIT 
+   - SRNTRROL 
+  +  SEPTDEL 
+   - SDPLANER 
+     TIMEINC  = 0030
+   - SDPLNVEW 
+  +  SEPTADD 
+   - SDPLNMOD 
+     TIMEMAX  = 0800
+  +  SDAUDPDF 
+
+*** Not EQ User Classes ***
+it no be defined:  
+(<>)STU
+  +  PSDGWSTD 
+  +  SRNSRCOD 
+  +  SRNTREQ 
+  +  SRNSCRIB 
+  +  SRNTRNST 
+  +  PSDGWBAN 
+
+*** User Classes including settings from Everyone and NE Classes ***
+(=)STU
+  +  SDWORKS 
+  +  SEPTEDIT 
+  +  SEPTDEL 
+  +  SRNSRCOD 
+  +  PSDGWSTD 
+     TIMEINC  = 0030
+ ++  SEPSTUED 
+ ++  SRNSTU 
+  +  SRNTREQ 
+   - SDPLNVEW 
+  +  SDWEB33 
+   - SDSEPMOD 
+  +  PSDGWBAN 
+   - SRNTRROL 
+  +  SRNTRNST 
+   - SDREFRES 
+   - SDPLANER 
+  +  SDPETVEW 
+  +  SEPTADD 
+   - SDPLNMOD 
+   - SDSEP 
+     TIMEMAX  = 0800
+  +  SDAUDPDF 
+  +  SRNSCRIB 
+(=)ADV
+  +  SEPTEDIT 
+ ++  SRNADV 
+   - SDATHRUN 
+  +  PSDGWSTD 
+   - AUDFREEZ 
+   - SDPLNVEW 
+   - SDPETALS 
+   - SDWEB55 
+   - SDHIST 
+   - SDSEPMOD 
+   - SDPLNDEL 
+  +  PSDGWBAN 
+   - SDAUDRUN 
+   - SDPETMYS 
+  +  SDSTUANY 
+   - SRNTRROL 
+   - SDREFRES 
+   - SDAUDDEL 
+   - SDPLANER 
+   - SDWEB56 
+   - SEPPLAN 
+   - SDATHREV 
+   - SDPLNMOD 
+   - SDPLNAUD 
+     TIMEMAX  = 0800
+  +  SDAUDPDF 
+  +  SRNSCRIB 
+   - SDPETDEL 
+ ++  SEPADV 
+   - SDATHHIS 
+  +  SDWORKS 
+   - SDEXPADD 
+   - SDSTUMY 
+  +  SEPTDEL 
+   - SDNTEDEL 
+     TIMEINC  = 0030
+  +  SRNSRCOD 
+   - SDPETMOD 
+  +  SRNTREQ 
+  +  SDWEB33 
+   - SDEXPDEL 
+   - SDATHAUD 
+   - SDPETADD 
+   - SDXML32 
+   - SDNTEMOD 
+   - SDEXCEPT 
+  +  SRNTRNST 
+   - SDTMP 
+   - SDXML30 
+   - SDPETVEW 
+   - SDATHDEL 
+  +  SEPTADD 
+   - SDSEP 
+   - SDSEPAPP 
+   - AUDDESCR 
+(=)ADVX
+  +  SDNTERUN 
+  +  SEPTEDIT 
+  +  PSDGWSTD 
+   - AUDFREEZ 
+   - SDPLNVEW 
+   - SDHIST 
+   - SDSEPMOD 
+   - SDPLNDEL 
+  +  PSDGWBAN 
+   - SDAUDRUN 
+   - SDPETMYS 
+  +  SDSTUANY 
+   - SRNTRROL 
+   - SDREFRES 
+   - SDPLANER 
+   - SDPLNMOD 
+   - SDPLNAUD 
+     TIMEMAX  = 0800
+  +  SDAUDPDF 
+  +  SRNSCRIB 
+   - SDPETDEL 
+ ++  SEPADV 
+  +  SDWORKS 
+  +  SEPTDEL 
+   - SDSTUMY 
+     TIMEINC  = 0030
+  +  SRNSRCOD 
+  +  SRNTREQ 
+   - SDPETMOD 
+  +  SDWEB33 
+   - SDPETADD 
+   - SDXML32 
+  +  SRNTRNST 
+   - SDXML30 
+   - SDTMP 
+   - SDPETVEW 
+  +  SEPTADD 
+   - SDSEP 
+  +  SDSEPAPP 
+   - AUDDESCR 
+ ++  SRNADVX 
+(=)REG
+  +  SEPTEDIT 
+   - PTSRADPR 
+  +  PSDGWSTD 
+   - SDPLNVEW 
+  +  PSDGWBAN 
+  +  SDPETMYS 
+  +  SDSTUANY 
+   - SRNTRROL 
+  +  SDREFRES 
+   - SDPLANER 
+  +  SHPSET 
+   - SDPLNMOD 
+     TIMEMAX  = 0800
+  +  SDAUDPDF 
+  +  SRNSCRIB 
+  +  SDPETDEL 
+  +  ANYSTUID 
+  +  SEPTMGMT 
+  +  SDWORKS 
+ ++  SEPREG 
+   - SDADMIN 
+  +  SEPTDEL 
+     TIMEINC  = 0030
+  +  SRNSRCOD 
+  +  SRNTREQ 
+  +  SDPETMOD 
+  +  SDWEB33 
+  +  PTSBANPR 
+  +  SDPETADD 
+  +  PSDGWSEP 
+  +  SRNTRNST 
+ ++  SRNREG 
+  +  SDTMP 
+  +  SDPETVEW 
+  +  SEPTADD 
+(=)ASST
+  +  SDWORKS 
+  +  SEPTEDIT 
+   - SRNTRROL 
+  +  SRNTRNST 
+ ++  SRNASST 
+   - SDPLANER 
+  +  SEPTDEL 
+  +  SRNSRCOD 
+  +  PSDGWSTD 
+     TIMEINC  = 0030
+  +  SRNTREQ 
+   - SDPLNVEW 
+   - SDPLNMOD 
+  +  SEPTADD 
+  +  SRNSCRIB 
+  +  SDAUDPDF 
+     TIMEMAX  = 0800
+  +  PSDGWBAN 
+(=)CLRK
+  +  SDWORKS 
+  +  SEPTEDIT 
+  +  SEPTDEL 
+  +  SRNSRCOD 
+  +  PSDGWSTD 
+     TIMEINC  = 0030
+  +  SRNTREQ 
+   - SDPLNVEW 
+ ++  SRNCLRK 
+  +  PSDGWBAN 
+   - SRNTRROL 
+  +  SRNTRNST 
+   - SDPLANER 
+  +  SEPTADD 
+   - SDPLNMOD 
+     TIMEMAX  = 0800
+  +  SDAUDPDF 
+  +  SRNSCRIB 
+(=)DEAN
+  +  SDWORKS 
+  +  SEPTEDIT 
+  +  SEPTDEL 
+  +  SRNSRCOD 
+  +  PSDGWSTD 
+     TIMEINC  = 0030
+  +  SRNTREQ 
+   - SDPLNVEW 
+  +  PSDGWBAN 
+ ++  SRNDEAN 
+   - SRNTRROL 
+  +  SRNTRNST 
+   - SDPLANER 
+  +  SEPTADD 
+   - SDPLNMOD 
+     TIMEMAX  = 0800
+  +  SDAUDPDF 
+  +  SRNSCRIB 
+(=)DEPT
+  +  SDWORKS 
+  +  SEPTEDIT 
+  +  SEPTDEL 
+  +  SRNSRCOD 
+  +  PSDGWSTD 
+     TIMEINC  = 0030
+  +  SRNTREQ 
+   - SDPLNVEW 
+  +  PSDGWBAN 
+   - SRNTRROL 
+  +  SRNTRNST 
+   - SDPLANER 
+ ++  SRNDEPT 
+  +  SEPTADD 
+   - SDPLNMOD 
+     TIMEMAX  = 0800
+  +  SDAUDPDF 
+  +  SRNSCRIB 

@@ -1,0 +1,52 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Mon Mar 19 09:42:36 2012
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   ././sqlldr_test_control.ctl
+Data File:      asdf.txt
+  Bad File:     ././asdf.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table XUPROMMGR.SFP_SAMPLE_TABLE, loaded from every logical record.
+Insert option in effect for this table: REPLACE
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+NUMBER_COL                            1:1     1           CHARACTER            
+VC2_COL                               2:4     3           CHARACTER            
+
+SQL*Loader-500: Unable to open file (asdf.txt)
+SQL*Loader-553: file not found
+SQL*Loader-509: System error: No such file or directory
+SQL*Loader-2026: the load was aborted because SQL Loader cannot continue.
+
+Table XUPROMMGR.SFP_SAMPLE_TABLE:
+  0 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                    640 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:             0
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Mon Mar 19 09:42:36 2012
+Run ended on Mon Mar 19 09:42:36 2012
+
+Elapsed time was:     00:00:00.11
+CPU time was:         00:00:00.02

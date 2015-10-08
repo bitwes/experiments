@@ -1,0 +1,8 @@
+new: showmode BOTH
+end of LOGIN.SQL
+The count is:  666973
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.05
+  1* declare

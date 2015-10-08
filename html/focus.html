@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<input type="text" id="box" >
+<button type="button" onclick="add_focus()" >Set focus</button>
+
+<div id="some_div" onblur="alert('lost it')" onclick="alert('look at me')">
+  <h3>Hello</h3>
+</div>
+
+<div>
+  <h4>down here</h4>
+</div>
+
+<script>
+  function add_focus(){
+    document.getElementById("some_div").focus()
+  }
+</script>
+
+</body>
+</html>

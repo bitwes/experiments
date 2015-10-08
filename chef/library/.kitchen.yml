@@ -1,0 +1,16 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  chef_omnibus_url: http://chefrepo.aviation.ge.com/chef/nodes/install.sh
+
+platforms:
+  - name: centos-6.6
+
+suites:
+  - name: default
+    run_list:
+      - recipe[library::default]
+    attributes:

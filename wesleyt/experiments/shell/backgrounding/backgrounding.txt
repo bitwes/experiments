@@ -1,0 +1,27 @@
+Ways to background
+
+Jobs
+------------------
+End the command with &
+Ctrl+z then type bg
+
+These can then be found by the "jobs" command.
+Stop using kill %# where # is the id listed by "jobs"
+
+Bring job to foreground using fg
+
+
+nohup
+------------------
+Creates a process that runs even if you logout.  awesome.
+
+
+Examples
+------------------
+Use infinite_loop.sh to mess with these
+
+bash infinte_loop.sh > foo.out 2> foo.err < /dev/null &
+
+bash infinte_loop.sh > foo.out
+<ctrl+z> (stops job)
+bg (backgrounds most recent job)

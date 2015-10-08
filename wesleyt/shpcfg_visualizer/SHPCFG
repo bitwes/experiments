@@ -1,0 +1,375 @@
+# $Id: //Tuxedo/INSTALL/Product/sis_Banner/release/admin/common/SHPCFG#1 $      
+
+#------------------------------------------------------------------------
+#Xavier Change History
+#
+#wesleyt 9/20/11
+#Added modifications to the ADVX, ADV, and STU groups as requested
+#by Mary Bessler.  The document outlining these changes can be found on
+#the DegreeWorks Implementation project in Team Dynamix on the "Build 
+#Security Key Rings" task.  Each section of changes starts with a Xavier
+#Mods header and runs until the end of the group.  The REG group was not
+#changes since the modifications being requested were already in place.
+#
+#wesleyt 1/4/12
+#More key ring modifications per TD issue 87D1-6.
+#------------------------------------------------------------------------
+
+                                                                                
+################SHPCFG - DW Security Management ########                        
+                                                                                
+# Once you change this file run $shpparse                                       
+# Lines that begin with pound (#) signs are comments                            
+                                                                                
+##### NOTE #############################################                        
+# When assigning keys by specific user-ID use the if stmt                       
+# example below                                                                 
+                                                                                
+# if (DGWSHPACCID = "123456789") then                                           
+                                                                                
+  #addkey = SDPETADD                                                            
+  #addkey = SDPETMOD                                                            
+  #addkey = SDPETDEL                                                            
+  #addkey = SDPETMYS                                                            
+  #addkey = SDPETVEW                                                            
+########################################################                        
+                                                                                
+##########TIMEOUT USAGE ################################                        
+                                                                                
+# When a user gets authenticated, the user's session expire time                
+# gets set to the current time plus the TIMEINC value. Each time                
+# a user makes a request the expire time once again gets set to                 
+# the current time plus the TIMEINC.  The expire time has a cap                 
+# of the user's longon time plus the TIMEMAX.                                   
+                                                                                
+# Using the TIMEINC and TIMEMAX commands in the SHPCFG file                     
+# overwrite all other timeout values                                            
+                                                                                
+if (EVERYONE) then                                                              
+                                                                                
+  TIMEINC = 0030 #30 MIN   #30 Mimutes of idle time                             
+  TIMEMAX = 0800 #8 HOURS  #Maz 8 hrs before relogon needed                     
+                                                                                
+  addkey = SDWORKS                                                              
+                                                                                
+  remkey = SDPLANER                                                             
+  remkey = SDPLNMOD                                                             
+  remkey = SDPLNVEW                                                             
+  remkey = SRNTRROL  # Remove TreQ Roll option.                                 
+  addkey = SDAUDPDF  #add PDF button
+  
+  addkey = SEPTADD
+  addkey = SEPTDEL
+  addkey = SEPTEDIT                                                                                
+############# DegreeWorks PC Applications ##############                        
+                                                                                
+if (DGWUSERCLASS <> "STU") Then                                                 
+                                                                                
+  addkey = SRNSCRIB  #Scribe                                                    
+  addkey = SRNSRCOD  #SureCode                                                  
+  addkey = PSDGWBAN  #SureCode access to Banner UCX Tables                      
+  addkey = PSDGWSTD  #SureCode acess to DW base tables
+  addkey = SRNTRNST  #Transit                                                   
+  addkey = SRNTREQ   #TreQ                                                      
+                                                                                
+############# Students #################################                        
+                                                                                
+                                                                                
+if (DGWUSERCLASS = "STU") then                                                  
+                                                                                
+  TIMEINC = 0030 #30 MIN   #30 Mimutes of idle time                             
+  TIMEMAX = 0800 #8 HOURS  #Maz 8 hrs before relogon needed                     
+
+  addgroup = SRNSTU  #See System Administrator's Guide for list of keys         
+                                                                                
+  addkey = SDSEPMOD  #Planner modification allowed                              
+  addkey = SDPETVEW  #View Petitions via Petitions Tab                          
+
+  #-------------------------
+  #4.1.0 Upgrade Key Changes
+  #-------------------------
+  addgroup = SEPSTUED # Planner Edit/Create
+ #addgroup = SEPSTUVW # Planner View only
+                                                                                
+  #-------------------------
+  #Xavier Mods
+  #-------------------------
+  
+  #WORKSHEET-Worksheet
+  addkey = SDWEB33
+
+  #PLANNER - Planner
+  remkey = SDSEPMOD
+  remkey = SDPLANER
+  remkey = SDSEP
+  remkey = SDPLNVEW
+
+  #Refresh Button
+  remkey = SDREFRES
+
+############# Advisors with Exceptions #################                        
+                                                                                
+if (DGWUSERCLASS = "ADV") then                                                  
+                                                                                
+  TIMEINC = 0030 #30 MIN   #30 Mimutes of idle time                             
+  TIMEMAX = 0800 #8 HOURS  #Maz 8 hrs before relogon needed                     
+                                                                                
+  addgroup = SRNADV  #See System Administrator's Guide for list of keys         
+                                                                                
+   addkey = SDSTUANY  #Student Search                                           
+   remkey = SDSTUMY   #Remove My Students                                       
+                                                                                
+  #remkey = SDPETADD  #Add Petitions                                            
+  #remkey = SDPETDEL  #Delete Petitions                                         
+  #remkey = SDPETMOD  #Modify Petitions                                         
+  #remkey = SDPETMYS  #My Petitions                                             
+  #remkey = SDPETVEW  #View all Petitions                                       
+                                                                                
+  #remkey = SDNTECHG  # Notes free text                                         
+
+  #-------------------------
+  #4.1.0 Upgrade Key Changes
+  #-------------------------
+   addgroup = SEPADV   # Planner Edit/Create keys for advisors
+
+  #-------------------------
+  #Xavier Mods
+  #-------------------------
+
+  #Refresh Button
+  remkey = SDREFRES
+
+  #WORKSHEET-Worksheet
+  remkey = SDAUDRUN
+  remkey = AUDFREEZ
+  remkey = AUDDESCR
+  remkey = SDXML30
+  remkey = SDXML32
+  addkey = SDWEB33
+
+  #WORKSHEET-Athletic Eligibility Audits
+  remkey = SDATHAUD
+  remkey = SDWEB55
+  remkey = SDWEB56
+  remkey = SDATHREV
+  remkey = SDATHRUN
+
+  #WORKSHEET-History
+  remkey = SDHIST
+  remkey = SDAUDDEL
+
+  #WORKSHEET-Athletic Eligibility History
+  remkey = SDATHHIS
+  remkey = SDATHDEL
+
+  #PLANNER-Planner    
+  remkey = SEPPLAN
+  remkey = SDSEP
+  remkey = SDPLNAUD
+  remkey = SDSEPMOD
+  remkey = SDPLNDEL
+  remkey = SDPLNVEW
+
+
+  #PLANNER-Template  
+  remkey = SDTMP
+  
+  #PLANNER-Management  
+  remkey = SDSEPAPP
+
+  #NOTES-Notes
+  remkey = SDNTEMOD
+  remkey = SDNTEDEL
+
+  #PETITIONS-Petitions
+  remkey = SDPETADD
+  remkey = SDPETMOD
+  remkey = SDPETDEL
+  remkey = SDPETVEW
+  remkey = SDPETALS
+  remkey = SDPETMYS
+    
+  #EXCEPITONS-Exceptions
+  remkey = SDEXCEPT
+  remkey = SDEXPADD
+  remkey = SDEXPDEL
+
+############# Advisors without Exceptions ##############                        
+                                                                                
+if (DGWUSERCLASS = "ADVX") then                                                 
+                                                                                
+  TIMEINC = 0030 #30 MIN   #30 Mimutes of idle time                             
+  TIMEMAX = 0800 #8 HOURS  #Maz 8 hrs before relogon needed                     
+                                                                                
+  addgroup = SRNADVX  #See System Administrator's Guide for list of keys        
+                                                                                
+   addkey = SDSTUANY  #Student Search                                           
+   remkey = SDSTUMY   #Remove My Students                                       
+                                                                                
+  #addkey = SDPETADD  #Add Petitions                                            
+  #addkey = SDPETDEL  #Delete Petitions                                         
+  #addkey = SDPETMOD  #Modify Petitions                                         
+  #addkey = SDPETMYS  #My Petitions                                             
+  #addkey = SDPETVEW  #View all Petitions                                       
+                                                                                
+  #remkey = SDNTECHG  #Notes free text                                          
+
+  #-------------------------
+  #4.1.0 Upgrade Key Changes
+  #-------------------------
+   addgroup = SEPADV   # Planner Edit/Create keys for advisors
+
+  #-------------------------
+  #Xavier Mods
+  #-------------------------
+
+  #Refresh Button
+  remkey = SDREFRES  
+
+  #WORKSHEET-Worksheet
+  addkey = SDWEB33
+  remkey = SDAUDRUN
+  remkey = AUDFREEZ
+  remkey = AUDDESCR
+  remkey = SDXML30
+  remkey = SDXML32                                                                                
+
+  #WORKSHEET-History
+  remkey = SDHIST
+
+  #PLANNER-Management
+  addkey = SDSEPAPP
+
+  #PLANNER-Planner  
+  remkey = SDPLANER
+  remkey = SDSEP
+  remkey = SDPLNAUD
+  remkey = SDSEPMOD
+  remkey = SDPLNDEL
+  remkey = SDPLNVEW
+
+  #PLANNER-Template
+  remkey = SDTMP
+  
+  #NOTES-Notes
+  addkey = SDNTERUN
+
+  #PETITIONS-Petitions
+  remkey = SDPETADD
+  remkey = SDPETMOD
+  remkey = SDPETDEL
+  remkey = SDPETVEW
+  remkey = SDPETMYS
+
+  addkey = SEPTADD
+  addkey = SEPTDEL
+  addkey = SEPTEDIT
+  
+############# Registrar  ###############################                        
+                                                                                
+if (DGWUSERCLASS = "REG") then                                                  
+                                                                                
+  TIMEINC = 0030 #30 MIN   #30 Mimutes of idle time                             
+  TIMEMAX = 0800 #8 HOURS  #Maz 8 hrs before relogon needed                     
+                                                                                
+  addgroup = SRNREG  #See System Administrator's Guide for list of keys         
+                                                                                
+  addkey = SDPETADD  #Add Petitions                                             
+  addkey = SDPETDEL  #Delete Petitions                                          
+  addkey = SDPETMOD  #Modify Petitions                                          
+  addkey = SDPETMYS  #My Petitions                                              
+  addkey = SDPETVEW  #View all Petitions                                        
+  addkey = SDREFRES  #Banner Refresh Button                                     
+  addkey = PTSBANPR  #Access to RAD30 through Transit                           
+                                                                                
+ #addkey = SDSOCCIV  #Civilian military report                                  
+ #addkey = SDSOCMIL  #Military military report                                  
+                                                                                
+  remkey = PTSRADPR  #Remove access to RAD11                                     
+  remkey = SDADMIN   #remove Admin tab
+
+  #-------------------------
+  #4.1.0 Upgrade Key Changes
+  #-------------------------
+  addgroup = SEPREG  #grants access to the Student Planner UCX tables
+  addkey = PSDGWSEP  #for Student Planner UCX tables	
+  addkey = SHPSET    #access to the SHP Settings tab in SHPEntry
+  addkey = SDSTUANY
+  addkey = ANYSTUID  #See/edit data on any student
+
+
+  #-------------------------
+  #Xavier Mods
+  #-------------------------
+  
+  #Petitions-petitions
+  addkey = SDPETMYS
+
+  #ADMIN-ADMIN
+  remkey = SDADMIN
+
+  #WORKSHEET-Worksheet
+  addkey = SDWEB33 
+
+  #TEMPLATES
+  addkey = SDTMP # SEP Templates
+  addkey = SEPTMGMT # Template Functionality
+  addkey = SEPTADD
+  addkey = SEPTDEL
+  addkey = SEPTEDIT
+
+
+############# Assistants  ##############################                        
+                                                                                
+if (DGWUSERCLASS = "ASST") then                                                 
+
+  TIMEINC = 0030 #30 MIN   #30 Mimutes of idle time                             
+  TIMEMAX = 0800 #8 HOURS  #Maz 8 hrs before relogon needed                     
+                                                                                
+  addgroup = SRNASST  #See System Administrator's Guide for list of keys        
+                                                                                
+############# Clerks  ##################################                        
+                                                                                
+if (DGWUSERCLASS = "CLRK") then                                                 
+                                                                                
+  TIMEINC = 0030 #30 MIN   #30 Mimutes of idle time                             
+  TIMEMAX = 0800 #8 HOURS  #Maz 8 hrs before relogon needed                     
+
+  addgroup = SRNCLRK  #See System Administrator's Guide for list of keys        
+                                                                                
+############# DEAN  ####################################                        
+                                                                                
+if (DGWUSERCLASS = "DEAN") then                                                 
+
+  TIMEINC = 0030 #30 MIN   #30 Mimutes of idle time                             
+  TIMEMAX = 0800 #8 HOURS  #Maz 8 hrs before relogon needed                     
+                                                                                
+  addgroup = SRNDEAN  #See System Administrator's Guide for list of keys        
+                                                                                
+############# Department Head  #########################                        
+                                                                                
+if (DGWUSERCLASS = "DEPT") then                                                 
+                                                                                
+  TIMEINC = 0030 #30 MIN   #30 Mimutes of idle time                             
+  TIMEMAX = 0800 #8 HOURS  #Maz 8 hrs before relogon needed                     
+                                                                                
+  addgroup = SRNDEPT  #See System Administrator's Guide for list of keys        
+                                                                                
+                                                                                
+                                                                                
+################## END #################################                        
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
