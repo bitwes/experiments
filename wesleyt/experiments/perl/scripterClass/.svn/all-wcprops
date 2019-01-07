@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/800/users/wesleyt/experiments/perl/scripterClass
+END
+raise_specific_error.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/800/users/wesleyt/experiments/perl/scripterClass/raise_specific_error.sql
+END
+XuScriptClass.pm
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/800/users/wesleyt/experiments/perl/scripterClass/XuScriptClass.pm
+END
+testSqlScript.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/800/users/wesleyt/experiments/perl/scripterClass/testSqlScript.sql
+END
+no_error.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/800/users/wesleyt/experiments/perl/scripterClass/no_error.sql
+END
+testXuClasses.pl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/800/users/wesleyt/experiments/perl/scripterClass/testXuClasses.pl
+END
+raise_failure.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/800/users/wesleyt/experiments/perl/scripterClass/raise_failure.sql
+END
+testErrorHandling.pl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/800/users/wesleyt/experiments/perl/scripterClass/testErrorHandling.pl
+END
+butch_rms_sync.pl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/800/users/wesleyt/experiments/perl/scripterClass/butch_rms_sync.pl
+END
+XuScriptVarsClass.pm
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/800/users/wesleyt/experiments/perl/scripterClass/XuScriptVarsClass.pm
+END

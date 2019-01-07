@@ -1,4 +1,0 @@
-#This will find any file with "firstname" anywhere in it
-#from the current directory on down.  the search is case
-#insensitive.
-grep -ir "firstname" ./

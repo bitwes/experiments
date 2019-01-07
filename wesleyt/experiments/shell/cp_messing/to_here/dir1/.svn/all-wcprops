@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/800/users/wesleyt/experiments/shell/cp_messing/to_here/dir1
+END
+file2.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/800/users/wesleyt/experiments/shell/cp_messing/to_here/dir1/file2.txt
+END
+file3.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/800/users/wesleyt/experiments/shell/cp_messing/to_here/dir1/file3.txt
+END

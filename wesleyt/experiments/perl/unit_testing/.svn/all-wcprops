@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/1382/users/wesleyt/experiments/perl/unit_testing
+END
+test_example_test.t
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/1382/users/wesleyt/experiments/perl/unit_testing/test_example_test.t
+END
+test_harness.pl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/1382/users/wesleyt/experiments/perl/unit_testing/test_harness.pl
+END
+simple_tests_test_more.t
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1382/users/wesleyt/experiments/perl/unit_testing/simple_tests_test_more.t
+END

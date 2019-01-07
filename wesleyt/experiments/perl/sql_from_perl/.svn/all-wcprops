@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/800/users/wesleyt/experiments/perl/sql_from_perl
+END
+sqlldr_test_control.log
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/800/users/wesleyt/experiments/perl/sql_from_perl/sqlldr_test_control.log
+END
+sqlldr_test_control.ctl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/800/users/wesleyt/experiments/perl/sql_from_perl/sqlldr_test_control.ctl
+END
+use_xusql.pl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/800/users/wesleyt/experiments/perl/sql_from_perl/use_xusql.pl
+END
+sample_query.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/800/users/wesleyt/experiments/perl/sql_from_perl/sample_query.sql
+END
+sqlldr_works.log
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/800/users/wesleyt/experiments/perl/sql_from_perl/sqlldr_works.log
+END
+sqlldr_test_data.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/800/users/wesleyt/experiments/perl/sql_from_perl/sqlldr_test_data.txt
+END
+create_sfp_sample.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/800/users/wesleyt/experiments/perl/sql_from_perl/create_sfp_sample.sql
+END
+spool.txt
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/800/users/wesleyt/experiments/perl/sql_from_perl/spool.txt
+END

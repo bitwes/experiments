@@ -1,0 +1,21 @@
+#/usr/bin/perl
+
+#POC for using a hash of functions/procedures.
+
+sub print_hello {
+    print "Hello ";
+}
+
+sub print_world {
+    print "World";
+}
+
+my %hash = (
+    hello => 'print_hello',
+    world => 'print_world',
+);
+
+
+&{ $hash{'hello'} }();
+&{ $hash{'world'} }();
+print "\n";

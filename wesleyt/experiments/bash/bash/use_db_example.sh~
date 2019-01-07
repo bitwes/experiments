@@ -1,3 +1,0 @@
-result=`db <<EOF
-select count(1) from spriden;
-EOF`

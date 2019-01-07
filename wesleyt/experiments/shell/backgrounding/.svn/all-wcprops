@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/800/users/wesleyt/experiments/shell/backgrounding
+END
+infinite_loop.sh
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/800/users/wesleyt/experiments/shell/backgrounding/infinite_loop.sh
+END
+foo.out
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/800/users/wesleyt/experiments/shell/backgrounding/foo.out
+END
+backgrounding.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/800/users/wesleyt/experiments/shell/backgrounding/backgrounding.txt
+END

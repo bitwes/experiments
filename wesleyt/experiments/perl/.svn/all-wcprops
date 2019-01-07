@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/2129/users/wesleyt/experiments/perl
+END
+call_oracle_from_perl.pl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/1382/users/wesleyt/experiments/perl/call_oracle_from_perl.pl
+END
+eval_or_do_test.pl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/1153/users/wesleyt/experiments/perl/eval_or_do_test.pl
+END
+conacat.pl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/1153/users/wesleyt/experiments/perl/conacat.pl
+END
+STDOUT
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/800/users/wesleyt/experiments/perl/STDOUT
+END
+file_basename.pl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/2129/users/wesleyt/experiments/perl/file_basename.pl
+END
+hashes.pl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/800/users/wesleyt/experiments/perl/hashes.pl
+END
+cd_places.pl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/800/users/wesleyt/experiments/perl/cd_places.pl
+END
+param_parsing.pl~
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/1041/users/wesleyt/experiments/perl/param_parsing.pl~
+END
+print_string_to_file.pl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/800/users/wesleyt/experiments/perl/print_string_to_file.pl
+END
+test_script_param.pl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/800/users/wesleyt/experiments/perl/test_script_param.pl
+END
+stdout.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/800/users/wesleyt/experiments/perl/stdout.txt
+END
+hash_while_loops.pl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/800/users/wesleyt/experiments/perl/hash_while_loops.pl
+END
+output_redirection.pl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/800/users/wesleyt/experiments/perl/output_redirection.pl
+END
+script_parameter_parsing.pl
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/1935/users/wesleyt/experiments/perl/script_parameter_parsing.pl
+END
+pathing.pl~
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/1041/users/wesleyt/experiments/perl/pathing.pl~
+END
+pathing.pl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/959/users/wesleyt/experiments/perl/pathing.pl
+END
+string_manip.pl
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/800/users/wesleyt/experiments/perl/string_manip.pl
+END
+sql_from_perl.zip
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/800/users/wesleyt/experiments/perl/sql_from_perl.zip
+END
+test_loading_profile.pl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/800/users/wesleyt/experiments/perl/test_loading_profile.pl
+END
+hash_of_functions.pl~
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/1041/users/wesleyt/experiments/perl/hash_of_functions.pl~
+END
+detect_verbose.pl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/800/users/wesleyt/experiments/perl/detect_verbose.pl
+END
+hash_of_functions.pl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/1041/users/wesleyt/experiments/perl/hash_of_functions.pl
+END
+arrays.pl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/800/users/wesleyt/experiments/perl/arrays.pl
+END
+use_globals_main.pl~
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/1041/users/wesleyt/experiments/perl/use_globals_main.pl~
+END
+timestamp.pl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/800/users/wesleyt/experiments/perl/timestamp.pl
+END
+sftp_using_password.pl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/800/users/wesleyt/experiments/perl/sftp_using_password.pl
+END
+minus_w_tests.pl
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/959/users/wesleyt/experiments/perl/minus_w_tests.pl
+END

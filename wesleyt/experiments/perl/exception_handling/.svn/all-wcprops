@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/1113/users/wesleyt/experiments/perl/exception_handling
+END
+test_eval.pl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/800/users/wesleyt/experiments/perl/exception_handling/test_eval.pl
+END
+err.pm
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/800/users/wesleyt/experiments/perl/exception_handling/err.pm
+END
+throw_con_err.pl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/800/users/wesleyt/experiments/perl/exception_handling/throw_con_err.pl
+END
+more_err.pm
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/800/users/wesleyt/experiments/perl/exception_handling/more_err.pm
+END
+throw_error.pl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/1113/users/wesleyt/experiments/perl/exception_handling/throw_error.pl
+END
+throw_more_error.pl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/800/users/wesleyt/experiments/perl/exception_handling/throw_more_error.pl
+END

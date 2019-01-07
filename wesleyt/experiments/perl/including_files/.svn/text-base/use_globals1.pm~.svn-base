@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+
+use xu_globals;
+
+package use_globals1;
+
+sub set_global1 {
+    $xu_globals::global1 = 'use globals 1 set this';
+}
+
+sub print_globals {
+    print "use_globals1
+$xu_globals::global1
+$xu_globals::global2
+";
+}

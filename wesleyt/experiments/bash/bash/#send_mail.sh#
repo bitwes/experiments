@@ -1,6 +1,0 @@
-
-
-
-open (ERRMAIL, "| /usr/sbin/sendmail $diagdest") || die;
-print ERRMAIL "From: nobody\@bannerdb.edu\n";
-print ERRMAIL "Subject: Housing Interface Error Report\n";

@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/800/users/wesleyt/experiments/shell/cp_messing/from_here/dir1/another_dir
+END
+this_file_was_in_from_here.txt
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/!svn/ver/800/users/wesleyt/experiments/shell/cp_messing/from_here/dir1/another_dir/this_file_was_in_from_here.txt
+END

@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+#This is a class that you could pass around, holding
+#all your globals.  I don't think this is a singleton.
+package xu_globals;
+
+my $global1 = "one";
+my $global2 = "two";
+
+sub new {
+    my($class) = @_;
+    my $hello_world = "Hello there to you World!";
+    my $self = {
+	hello_world => $hello_world
+    };
+    bless($self, $class);
+    return $self;
+}
+
+
+1;

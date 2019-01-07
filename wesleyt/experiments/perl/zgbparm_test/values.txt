@@ -1,4 +1,0 @@
-#module|process|param name|param value|from date|to date
-finaid_b|tables_reset_b|parm_term_code4|201205
-#finaid_b|tables_reset_b|parm_term_code5|201209
-#finaid_b|tables_reset_b|parm_term_code6|201301
